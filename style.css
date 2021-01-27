@@ -1,0 +1,28 @@
+* { margin: 0; padding: 0; }
+body {
+  height: 2000px;
+  background: #3a3a36;
+}
+
+.container {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first { filter: url("#distort1"); }
+#second { filter: url("#distort2"); }
+
+h1 {
+  font-family: 'Arial', cursive;
+  font-weight: inherit;
+  font-size: 5em;
+  text-align: center;
+  color: #c4ac6f;
+  line-height: 1;
+}
+
+svg {
+  display: none;
+}
