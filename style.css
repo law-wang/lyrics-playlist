@@ -1,25 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
 * { margin: 0; padding: 0; }
+::-moz-selection { background: none; }
+::selection { background: none; }
+
 body {
-  height: 2000px;
-  background: #3a3a36;
+/*   background: #3a3a36; */
+/*   background: #0A0704; */
+  background: #ccc1b5;
+  font-family: 'Potta One';
+}
+
+.video {
+  margin: auto;
 }
 
 .container {
   height: 800px;
+  max-width: 480px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#first { filter: url("#distort1"); }
-#second { filter: url("#distort2"); }
+/* #line0 { filter: url("#distort0"); }
+#line1 { filter: url("#distort2"); } */
 
 h1 {
-  font-family: 'Arial', cursive;
-  font-weight: inherit;
-  font-size: 5em;
+  font-family: 'Potta One', 'Arial', 'Helvetica', cursive;
+  text-shadow: 2px 2px #4c4537;
+/*   font-weight: inherit; */
+  font-size: 3em;
   text-align: center;
-  color: #c4ac6f;
+/*   color: #c4ac6f; */
+  color: #B29B70;
   line-height: 1;
 }
 
