@@ -6,22 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Champagne Problems</title>
-    <link rel="shortcut icon" href="/assets/favicon.jpg">
+    <link rel="shortcut icon" type="image/png" href="https://cdn.glitch.com/d11413e6-688d-4094-b9b5-206121040c92%2Ffavicon.png?v=1612236290971">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-    <script src="/script.js" defer></script>
+    <script src="/cham-problems-script.js" defer></script>
   </head>  
+  
   <body>
     
-    <iframe width="0" height="0" src="https://www.youtube.com/embed/wMpqCRF7TKg?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
     
-    <main class="all-lyrics" id="lyrics-container">
-      
-    </main>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/wMpqCRF7TKg?enablejsapi=1" frameborder="0" allowfullscreen id="video"></iframe>
     
-    <main class="all-filters" id="filters-container">
-      
-    </main>
+    <button class="control-button" id="music-control">
+      <i class="fa fa-play" id="play"></i>
+      <i class="fa fa-pause" id="pause"></i>
+    </button>
+    
+    <main class="all-lyrics" id="lyrics-container"></main>
+    
+    <main class="all-filters" id="filters-container"></main>
 
   </body>
 </html>

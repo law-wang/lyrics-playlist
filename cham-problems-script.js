@@ -55,13 +55,72 @@ document.body.onload = () => {
   })
 }
 
+// update filter and opacity for every scroll
 $(window).scroll(() => {
   const top = $('html, body').scrollTop()
   for (let i = 0; i < allLyrics.length; i++) {
-    $(`#distort${i}`).find("feDisplacementMap").attr('scale', 0.5 * (top - (800 * i)))
+    $(`#distort${i}`).find("feDisplacementMap").attr('scale', 0.5 * (top - (window.innerHeight * i)))
     // for no distort before appearing on screen
     // $(`#distort${i}`).find("feDisplacementMap").attr('scale', Math.max(0, 0.5 * (top - (800 * i))))
-    $(`#hline${i}`).css('opacity', Math.min(1 + ((top - (800 * i)) * 0.002), 1 - ((top - (800 * i)) * 0.002)))
+    $(`#hline${i}`).css('opacity', Math.min(1 + ((top - (window.innerHeight * i)) * 0.002), 1 - ((top - (window.innerHeight * i)) * 0.002)))
   }
-// $("h1").css('opacity', 1 - (top * 0.007))
+})
+
+// inject YouTube API script
+const tag = document.createElement('script')
+tag.src = "https://www.youtube.com/player_api"
+var firstScriptTag = document.getElementsByTagName('script')[0]
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+// set up YouTube player
+let player
+let notPlaying = true
+function onYouTubePlayerAPIReady() { 
+  // create the global player from the specific iframe (#video)
+  player = new YT.Player('video', {
+    // call this function when player is ready to use
+    events: { 'onReady': onPlayerReady }
+  })
+}
+function onPlayerReady(event) {
+  const musicControl = document.getElementById("music-control")
+  const playbutton = document.getElementById("play")
+  const pausebutton = document.getElementById("pause")
+  musicControl.addEventListener("click", () => {
+    if (notPlaying) {
+      player.playVideo()
+      notPlaying = false
+      playbutton.style.opacity = 0
+      setTimeout(() => { pausebutton.style.opacity = 1 }, 200)
+    } else {
+      player.pauseVideo()
+      notPlaying = true
+      setTimeout(() => { playbutton.style.opacity = 1 }, 200)
+      pausebutton.style.opacity = 0
+    }
+  })
+}
+
+// scroll progress bar
+function scrollProgressBar() {
+  const progressBar = $(".progress-bar")
+  let max, value, width
+
+  const getWidth = () => {
+    value = $('html, body').scrollTop()
+    max = $(document).height() - $(window).height()
+    return ((value / max) * 100 + "%")
+  };
+
+  const setWidth = () => {
+    progressBar.css({ width: getWidth })
+  }
+
+  $(document).on("scroll", setWidth)
+  $(window).on("resize", setWidth)
+}
+
+
+$(document).ready(function(){
+  scrollProgressBar()
 })
