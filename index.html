@@ -6,97 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Champagne Problems</title>
+    <link rel="shortcut icon" type="image/png" href="https://cdn.glitch.com/d11413e6-688d-4094-b9b5-206121040c92%2Ffavicon.png?v=1612236290971">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style.css">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-    <script src="/script.js" defer></script>
+    <script src="/cham-problems-script.js" defer></script>
   </head>  
+  
   <body>
     
-    <div class="container" id="first">
-      <h1>You booked the night train for a reason
-      <br>So you could sit there in this hurt</h1>
-    </div>
-
-    <div class="container" id="second">
-      <h1>Bustling crowds or silent sleepers
-      <br>You're not sure which is worse</h1>
+    <div class="progress-container">
+      <span class="progress-bar"></span>
     </div>
     
-    <div class="container" id="">
-      <h1>Because I dropped your hand while dancing
-      <br>Left you out there standing</h1>
-    </div>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/wMpqCRF7TKg?enablejsapi=1" frameborder="0" allowfullscreen id="video"></iframe>
     
-    <div class="container" id="">
-      <h1>Bustling crowds or silent sleepers
-      <br>You're not sure which is worse</h1>
-    </div>
+    <button class="control-button" id="music-control">
+      <i class="fa fa-play" id="play"></i>
+      <i class="fa fa-pause" id="pause"></i>
+    </button>
     
-    <div class="container" id="">
-      <h1>Crestfallen on the landing
-      <br>Champagne problems</h1>
-    </div>
+    <main class="all-lyrics" id="lyrics-container"></main>
     
-    <div class="container" id="">
-      <h1>Your heart was glass, I dropped it
-      <br><i>Champagne problems</i></h1>
-    </div>
-    
-    <div class="container" id="">
-      <h1>Crestfallen on the landing
-      <br>Champagne problems</h1>
-    </div>
-    
-    <div class="container" id="">
-      <h1>Crestfallen on the landing
-      <br>Champagne problems</h1>
-    </div>
-    
-    <div class="container" id="">
-      <h1>Crestfallen on the landing
-      <br>Champagne problems</h1>
-    </div>
-    
-    
-
-  <svg xmlns="http://www.w3.org/2000/svg"
-       version="1.1">
-      <defs>
-          <filter id="distort1">
-            <feTurbulence baseFrequency="0.015" 
-                            numOctaves="3" 
-                            result="warp" 
-                            type="fractalNoise">
-            </feTurbulence>
-
-            <feDisplacementMap in="SourceGraphic" 
-                               in2="warp" 
-                               scale="0" 
-                               xChannelSelector="R" 
-                               yChannelSelector="B">
-            </feDisplacementMap>
-          </filter>
-      </defs>
-  </svg>
-      <svg xmlns="http://www.w3.org/2000/svg"
-       version="1.1">
-      <defs>
-          <filter id="distort2">
-            <feTurbulence baseFrequency="0.015" 
-                            numOctaves="3" 
-                            result="warp" 
-                            type="fractalNoise">
-            </feTurbulence>
-
-            <feDisplacementMap in="SourceGraphic" 
-                               in2="warp" 
-                               scale="0" 
-                               xChannelSelector="R" 
-                               yChannelSelector="B">
-            </feDisplacementMap>
-          </filter>
-      </defs>
-  </svg>
+    <main class="all-filters" id="filters-container"></main>
 
   </body>
 </html>
