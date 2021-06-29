@@ -1,34 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Champagne Problems</title>
-    <link rel="shortcut icon" type="image/png" href="https://cdn.glitch.com/d11413e6-688d-4094-b9b5-206121040c92%2Ffavicon.png?v=1612236290971">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/style.css">
+    <title>lyrics by rence</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://cdn.glitch.com/d11413e6-688d-4094-b9b5-206121040c92%2Ffavicon.png?v=1612236290971"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--     <link rel="stylesheet" href="/style.css"> -->
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-    <script src="/cham-problems-script.js" defer></script>
-  </head>  
-  
+    <script src="/index-script.js" defer></script>
+
+    <style>
+      body,
+      html {
+        overflow: hidden;
+      }
+
+      body {
+        background: #000;
+      }
+
+      .container {
+        position: relative;
+        width: 100vw;
+        overflow: hidden;
+      }
+
+      .scrolling-text {
+        display: inline-block;
+        transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+        will-change: transform;
+        backface-visibility: hidden;
+      }
+
+      .scrolling-text .scrolling-text-content {
+        color: #fff;
+        font-size: 120px;
+        white-space: nowrap;
+        transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+        line-height: 1em;
+        margin: 50px 0;
+      }
+      
+      .scrolling-text .scrolling-text-content a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.5s linear;
+      }
+      
+      .scrolling-text .scrolling-text-content a:hover {
+        color: rgb(255 212 96 / 90%);
+      }
+    </style>
+  </head>
+
   <body>
-    
-    <div class="progress-container">
-      <span class="progress-bar"></span>
+
+    <div class="container" speed="70">
+      <div class="scrolling-text">
+        <h2 class="scrolling-text-content">
+          <a href="./champagne-problems.html">Champagne Problems</a> • lost boy • Long Live • Alone Together •
+        </h2>
+      </div>
     </div>
     
-    <iframe width="0" height="0" src="https://www.youtube.com/embed/wMpqCRF7TKg?enablejsapi=1" frameborder="0" allowfullscreen id="video"></iframe>
+    <div class="container left-to-right" speed="100">
+      <div class="scrolling-text">
+        <h2 class="scrolling-text-content">
+            lost boy • Long Live • Alone Together • <a href="./champagne-problems.html">Champagne Problems</a> •
+        </h2>
+      </div>
+    </div>
     
-    <button class="control-button" id="music-control">
-      <i class="fa fa-play" id="play"></i>
-      <i class="fa fa-pause" id="pause"></i>
-    </button>
+    <div class="container">
+      <div class="scrolling-text">
+        <h2 class="scrolling-text-content">
+          Long Live • Alone Together • <a href="./champagne-problems.html">Champagne Problems</a> • lost boy •
+        </h2>
+      </div>
+    </div>
     
-    <main class="all-lyrics" id="lyrics-container"></main>
+    <div class="container">
+      <div class="scrolling-text">
+        <h2 class="scrolling-text-content">
+          Alone Together • <a href="./champagne-problems.html">Champagne Problems</a> • lost boy • Long Live •
+        </h2>
+      </div>
+    </div>
     
-    <main class="all-filters" id="filters-container"></main>
-
   </body>
 </html>
