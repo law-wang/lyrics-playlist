@@ -32,7 +32,7 @@ const filterContent4 = '</filter></defs></svg>'
 
 const mainContent = document.getElementById("lyrics-container")
 const filterSection = document.getElementById("filters-container")
-const styleSheet = $('link[href="/style.css"]')[0].sheet
+const styleSheet = $('link[href="/CP-style.css"]')[0].sheet
 let firstTime = true
 
 // create all lyrics and filters
